@@ -8,6 +8,10 @@ Install required packages
 Add it to your plugins: cypress/plugins/index.js
 const cucumber = require('cypress-cucumber-preprocessor').default
 module.exports = (on, config) => { on('file:preprocessor', cucumber()) } 
+Add to package.json
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
 
 Add to cypress.json 
 { "testFiles": "**/*.feature" }​
